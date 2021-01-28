@@ -27,12 +27,10 @@ _Create your own custom Static Site Generator (like [Jekyll](https://jekyllrb.co
 1. Visit [github.com/new](https://github.com/new) and create a new repository named `makesite`.
 2. Run each command line-by-line in your terminal to set up the project:
 
-```bash
-$ cd ~/go/src
-$ git clone git@github.com:Make-School-Labs/makesite.git
-$ cd makesite
-$ git remote rm origin
-$ git remote add origin git@github.com:YOUR_GITHUB_USERNAME/makesite.git
+Frist fork this repo Make-School-Labs/makesite.git, then
+
+```zsh
+git clone git@github.com:YOUR_GITHUB_USERNAME/makesite.git && cd makesite
 ```
 
 ## Deliverables
@@ -50,8 +48,8 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 
 #### v1.0 Requirements
 
-- [ ] Edit line `4` of `README.md`. Change this line to the following, replacing `YOUR_USERNAME` and `YOUR_REPONAME` with your GitHub username and repository name respectively.
-- [ ] Read in the contents of the provided `first-post.txt` file.
+- [x] Edit line `4` of `README.md`. Change this line to the following, replacing `YOUR_USERNAME` and `YOUR_REPONAME` with your GitHub username and repository name respectively.
+- [x] Read in the contents of the provided `first-post.txt` file.
 - [ ] Edit the provided HTML template (`template.tmpl`) to display the contents of `first-post.txt`.
 - [ ] Render the contents of `first-post.txt` using Go Templates and print it to stdout.
 - [ ] Write the HTML template to the filesystem to a file. Name it `first-post.html`.
