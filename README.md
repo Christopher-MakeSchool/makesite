@@ -50,8 +50,8 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 
 - [x] Edit line `4` of `README.md`. Change this line to the following, replacing `YOUR_USERNAME` and `YOUR_REPONAME` with your GitHub username and repository name respectively.
 - [x] Read in the contents of the provided `first-post.txt` file.
-- [ ] Edit the provided HTML template (`template.tmpl`) to display the contents of `first-post.txt`.
-- [ ] Render the contents of `first-post.txt` using Go Templates and print it to stdout.
+- [x] Edit the provided HTML template (`template.tmpl`) to display the contents of `first-post.txt`.
+- [x] Render the contents of `first-post.txt` using Go Templates and print it to stdout.
 - [ ] Write the HTML template to the filesystem to a file. Name it `first-post.html`.
 - [ ] Manually test the generated HTML page by running `/.makesite`. Double-click the `first-post.html` file that appears in your directory after running the command to open the generated page in your browser.
 - [ ] **Add, commit, and push to GitHub**.
@@ -97,9 +97,9 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 
 ### Lesson Plans
 
-- [**BEW 2.5**: Project #1 - SSGs](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Ecosystems/#/Lessons/SSGProject): Code samples you can use to complete the MVP requirements.
-- [**BEW 2.5**: Files & Directories](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Ecosystems/#/Lessons/FilesDirectories): Code samples you can use to complete v1.1 requirements.
-- [**BEW 2.5**: Files & Directories](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Ecosystems/#/Lessons/3rdPartyLibs): Code samples you can use to complete v1.2 requirements.
+- [**BEW 2.5**: Project #1 - SSGs](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Languages/#/Lessons/SSGProject): Code samples you can use to complete the MVP requirements.
+- [**BEW 2.5**: Files & Directories](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Languages/#/Lessons/FilesDirectories): Code samples you can use to complete v1.1 requirements.
+- [**BEW 2.5**: Files & Directories](https://make-school-courses.github.io/BEW-2.5-Strongly-Typed-Languages/#/Lessons/**3rdPartyLibs**): Code samples you can use to complete v1.2 requirements.
 
 ### Example Code
 
