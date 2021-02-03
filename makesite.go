@@ -1,15 +1,20 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"os"
-	// "flag"
 	"html/template"
 	"io/ioutil"
+	"log"
+	"os"
+	"strings"
 )
 
 // Stores the contents of file as a string
-type dataFile struct {
+type dataProcessing struct {
+	Path    string
+	Name    string
+	HTML    string
 	Content string
 }
 
@@ -24,15 +29,15 @@ func readFile(fileName string) string {
 }
 
 // Create a template based of a given file
-func renderTemplate(path, outputFile string, data dataFile) {
+func renderTemplate(path string, data dataProcessing) {
 	t := template.Must(template.New(path).ParseFiles(path))
 	err := t.Execute(os.Stdout, data)
 	if err != nil {
 		panic(err)
 	}
-	newFile, _ := os.Create(outputFile)
+	newFile, _ := os.Create(data.HTML)
 	t.Execute(newFile, data)
-	fmt.Print("Saved File: ", outputFile)
+	fmt.Print("Saved File: ", data.HTML)
 }
 
 // // Fill a template with the given content
@@ -42,16 +47,44 @@ func renderTemplate(path, outputFile string, data dataFile) {
 // 	if err != nil {
 // 		panic(err)
 // 	}
-	// fmt.Print("Saved File", newFileName)
+// fmt.Print("Saved File", newFileName)
 // }
 
 func main() {
-	// fmt.Println("Running Main Function")
-	// fmt.Println("\nv1.0 Reg#2: Read the contents of 'first-post.txt' ")
-	fileContents := dataFile{readFile("first-post.txt")}
+	var dirPath, filePath string
+	flag.StringVar(&dirPath, "dir", "", "Directory Path")
+	flag.StringVar(&filePath, "file", "", "Name or Path to a text file")
+	flag.Parse()
 
-	// fmt.Println("v1.0 Reg#3&4: Edit and Print the provided html template 'template.tmpl' with the contents of 'first-post.txt' ")
-	// fmt.Println("\nv1.0 Reg#5: Write the html template to a file named 'first-post.html' ")
-	renderTemplate("template.tmpl", "first-post.html", fileContents)
-	
+	// fmt.Print(dirPath, filePath)
+
+	switch {
+	case dirPath != "":
+		files, err := ioutil.ReadDir(dirPath)
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		for _, file := range files {
+			fmt.Println(file.Name())
+		}
+
+	case filePath != "":
+		fileName := strings.Split(filePath, ".txt")[0]
+		namedHTML := fileName + ".html"
+		fileContents := readFile(filePath)
+
+		info := dataProcessing{
+			Path:    filePath,
+			Name:    fileName,
+			HTML:    namedHTML,
+			Content: fileContents,
+		}
+		// fmt.Println(info)
+
+		renderTemplate("template.tmpl", info)
+
+	default:
+		fmt.Print("No Option Selected")
+	}
 }
