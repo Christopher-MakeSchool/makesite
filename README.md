@@ -4,7 +4,7 @@
 
 _Create your own custom Static Site Generator (like [Jekyll](https://jekyllrb.com/) or [Hugo](https://gohugo.io/)) by cloning and fulfilling the requirements in this repo!_
 
-### 📚 Table of Contents
+## 📚 Table of Contents
 
 1. [Project Structure](#project-structure)
 2. [Getting Started](#getting-started)
@@ -24,10 +24,7 @@ _Create your own custom Static Site Generator (like [Jekyll](https://jekyllrb.co
 
 ## Getting Started
 
-1. Visit [github.com/new](https://github.com/new) and create a new repository named `makesite`.
-2. Run each command line-by-line in your terminal to set up the project:
-
-Frist fork this repo Make-School-Labs/makesite.git, then
+Frist, fork the [Make-School-Labs/makesite repo](https://github.com/Make-School-Labs/makesite/fork), or [this/my repo](https://github.com/Christopher-MakeSchool/makesite/fork), then run this command
 
 ```zsh
 git clone git@github.com:YOUR_GITHUB_USERNAME/makesite.git && cd makesite
@@ -39,14 +36,12 @@ git clone git@github.com:YOUR_GITHUB_USERNAME/makesite.git && cd makesite
 
 - Complete each task in the order they appear.
 - Use [GitHub Task List](https://help.github.com/en/github/managing-your-work-on-github/about-task-lists) syntax to update the task list.
+- Use [GitHub Version Tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) to show your progress through this project.
 
-### MVP
+### MVP v1.0 Requirements
 
-Complete the MVP as If you finish early, move on to the stretch challenges.
-
+Complete the MVP and If you finish early, move on to the stretch challenges. \
 If you get stuck on any step, be sure to print the output to `stdout`!
-
-#### v1.0 Requirements
 
 - [x] Edit line `4` of `README.md`. Change this line to the following, replacing `YOUR_USERNAME` and `YOUR_REPONAME` with your GitHub username and repository name respectively.
 - [x] Read in the contents of the provided `first-post.txt` file.
@@ -68,10 +63,10 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 #### v1.1 Requirements
 
 - [ ] Create 3 new `.txt` files for testing in the same directory as your project.
-- [ ] Add a new flag to the `makesite` command named `dir`.
+- [X] Add a new flag to the `makesite` command named `dir`.
 - [ ] Use the flag to find all `.txt` files in the given directory. Print them to `stdout`.
 - [ ] With the list of `.txt` files you found, generate an HTML page for each.
-- [ ] Run `./makesite --dir=.` to test in your local directory.
+- [X] Run `./makesite --dir=.` to test in your local directory.
 - [ ] **Add, commit, and push to GitHub**.
 
 #### v1.1 Stretch Challenges
@@ -88,9 +83,9 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 
 - [ ] Initialize Go modules in your project.
 - [ ] Add any third party library to your project to enhance it's functionality. Some ideas you might consider include **_(CHOOSE ONLY ONE)_**:
-    - [ ] Translating page content using Google Translate.
-    - [ ] Parse Markdown (`.md`) files and transform them into HTML. `#` through `######` should translate to `<h1>` through `<h6>` elements.
-    - [ ] **_FILL IN THE BLANK_**: `I will use the __________________________________ library. The documentation is located at __________________________________. My goal is to use it to __________________________________.`
+  - [ ] Translating page content using Google Translate.
+  - [ ] Parse Markdown (`.md`) files and transform them into HTML. `#` through `######` should translate to `<h1>` through `<h6>` elements.
+  - [ ] **_FILL IN THE BLANK_**: `I will use the __________________________________ library. The documentation is located at __________________________________. My goal is to use it to __________________________________.`
 - [ ] **Add, commit, and push to GitHub**.
 
 ## Resources
