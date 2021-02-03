@@ -1,26 +1,21 @@
 package main
 
 import (
-	"os"
 	"fmt"
+	"os"
 	// "flag"
-	"io/ioutil"
 	"html/template"
+	"io/ioutil"
 )
 
-func main() {
-	fmt.Println("Running Main Function")
-	fmt.Println("\nv1.0 Reg#2: Read the contents of 'first-post.txt' ")
-	file_contents := data_file{readFile("first-post.txt")}
-	// fmt.Println("\n", file_contents)
-	fmt.Println("\nv1.0 Reg#3: Edit the provided html template 'template.tmpl' ")
-	renderTemplate("template.tmpl", "template.tmpl", file_contents)
-	// fmt.Println("\n", )
-
+// Stores the contents of file as a string
+type dataFile struct {
+	Content string
 }
 
-func readFile(file_name string) string {
-	fileContents, err := ioutil.ReadFile(file_name)
+// Read a file given its path/name
+func readFile(fileName string) string {
+	fileContents, err := ioutil.ReadFile(fileName)
 	if err != nil {
 		panic(err)
 	}
@@ -28,16 +23,35 @@ func readFile(file_name string) string {
 	return string(fileContents)
 }
 
-type data_file struct {
-	Content string
-}
-
-func renderTemplate(output_template_name, path string, data data_file) *template.Template {
-	t := template.Must(template.New(output_template_name).ParseFiles(path))
+// Create a template based of a given file
+func renderTemplate(path, outputFile string, data dataFile) {
+	t := template.Must(template.New(path).ParseFiles(path))
 	err := t.Execute(os.Stdout, data)
 	if err != nil {
 		panic(err)
 	}
+	newFile, _ := os.Create(outputFile)
+	t.Execute(newFile, data)
+	fmt.Print("Saved File: ", outputFile)
+}
 
-	return t
+// // Fill a template with the given content
+// func writeHTML(content, newFileName string) {
+// 	bytesToWrite := []byte(content)
+// 	err := ioutil.WriteFile(newFileName, bytesToWrite, 0644)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+	// fmt.Print("Saved File", newFileName)
+// }
+
+func main() {
+	// fmt.Println("Running Main Function")
+	// fmt.Println("\nv1.0 Reg#2: Read the contents of 'first-post.txt' ")
+	fileContents := dataFile{readFile("first-post.txt")}
+
+	// fmt.Println("v1.0 Reg#3&4: Edit and Print the provided html template 'template.tmpl' with the contents of 'first-post.txt' ")
+	// fmt.Println("\nv1.0 Reg#5: Write the html template to a file named 'first-post.html' ")
+	renderTemplate("template.tmpl", "first-post.html", fileContents)
+	
 }
