@@ -8,6 +8,8 @@ import (
 	"log"
 	"os"
 	"strings"
+	"regexp"
+	"path/filepath"
 )
 
 // Stores the contents of file as a string
@@ -50,14 +52,29 @@ func main() {
 
 	switch {
 	case dirPath != "":
-		files, err := ioutil.ReadDir(dirPath)
-		if err != nil {
-			log.Fatal(err)
+		libRegEx, e := regexp.Compile("^.+\\.(txt)$")
+		if e != nil {
+				log.Fatal(e)
 		}
 
-		for _, file := range files {
-			fmt.Println(file.Name())
+		e = filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
+				if err == nil && libRegEx.MatchString(info.Name()) {
+						println(info.Name())
+				}
+				return nil
+		})
+		if e != nil {
+				log.Fatal(e)
 		}
+
+		// files, err := ioutil.ReadDir(dirPath)
+		// if err != nil {
+		// 	log.Fatal(err)
+		// }
+
+		// for _, file := range files {
+		// 	fmt.Println(file.Name())
+		// }
 
 	case filePath != "":
 		fileName := strings.Split(filePath, ".txt")[0]

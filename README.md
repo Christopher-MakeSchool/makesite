@@ -64,7 +64,7 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 
 - [X] Create 3 new `.txt` files for testing in the same directory as your project.
 - [X] Add a new flag to the `makesite` command named `dir`.
-- [ ] Use the flag to find all `.txt` files in the given directory. Print them to `stdout`.
+- [X] Use the flag to find all `.txt` files in the given directory. Print them to `stdout`.
 - [ ] With the list of `.txt` files you found, generate an HTML page for each.
 - [X] Run `./makesite --dir=.` to test in your local directory.
 - [ ] **Add, commit, and push to GitHub**.
