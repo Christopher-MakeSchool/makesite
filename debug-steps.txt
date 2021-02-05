@@ -1,0 +1,83 @@
+# Notes on Debuging
+
+If you can’t find the bug, you’re looking in the wrong place.
+Go back to where it last worked.
+Contain the bug.
+Look for the bug in a new place, time, or format.
+Be responsible for the code.
+Learn from the bug.
+
+----
+
+## ?s
+
+### What error message (if any) is there?
+
+### What line number is causing the error?
+
+### What is the actual output vs. the expected?
+
+### What assumption(s) the developer has made?
+
+## Techniques
+
+- Trace Backward: If there is a specific line number causing the error
+- Trace Forward: If you aren't sure which line is causing the error
+- Divide and Conquer: If there are multiple areas which may have caused the error
+
+----
+
+### Trace backward, figure out which line of code is producing the error.
+
+  Then, work backwards one line at a time until you find the source of the bad data. \
+  Use this technique when...
+
+    - The error is thrown from a known location
+    - You understand the program well enough to know what it's supposed to be doing
+
+### Trace forward, start at the beginning of your program.
+
+  Then, work forwards one line at a time and verify that your mental model matches the result, using a debugger or log statements. \
+  Use this technique when...
+
+    - The problem line isn’t known
+    - You can't narrow down the problem to one specific area of the code
+
+### To divide and conquer:
+
+  Identify different code sections that could have caused the error \
+  Use breakpoints or log statements at the boundaries to test which area is the problem \
+  Focus your efforts on that area using Trace Forward or Trace Backward \
+  Use this technique when...
+
+    - There are multiple areas where the error could have come from
+
+----
+
+## Example Sketch
+
+```python3
+  #! Plan OF Attack
+  '''
+  First, Skim the Functions main and contains_3_consecutive from above, what do you expect to be outputed?
+    - expected output
+      - 
+      - output would be:
+      - 
+  Next, Run the code in the terminal with pyhron3 exercise-1.py to view the Actual Output
+    - actual
+      
+  Looks Like we got a call to the Traceback, can you spot what the error message is?
+    - 
+  Can you find what line(s) may be causing said error?
+      - 
+      - 
+    - 
+  What can you deduce about the cause of the error?
+    - 
+  What assumptions did the developer(s) make, State them here
+    - 
+  State your Solutions/Assumptions here
+    - To Fix this error Change 
+  '''
+```

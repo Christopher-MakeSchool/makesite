@@ -40,16 +40,6 @@ func renderTemplate(path string, data dataProcessing) {
 	fmt.Print("Saved File: ", data.HTML)
 }
 
-// // Fill a template with the given content
-// func writeHTML(content, newFileName string) {
-// 	bytesToWrite := []byte(content)
-// 	err := ioutil.WriteFile(newFileName, bytesToWrite, 0644)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// fmt.Print("Saved File", newFileName)
-// }
-
 func main() {
 	var dirPath, filePath string
 	flag.StringVar(&dirPath, "dir", "", "Directory Path")
