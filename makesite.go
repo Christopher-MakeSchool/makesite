@@ -59,7 +59,15 @@ func main() {
 
 		e = filepath.Walk(dirPath, func(path string, info os.FileInfo, err error) error {
 				if err == nil && libRegEx.MatchString(info.Name()) {
-						println(info.Name())
+						fileContents := readFile(info.Name())
+						info := dataProcessing{
+							Name:    info.Name(),
+							HTML:    strings.Split(info.Name(), ".txt")[0] + ".html",
+							Content: fileContents,
+						}
+						// fmt.Println(info)
+
+						renderTemplate("template.tmpl", info)
 				}
 				return nil
 		})
