@@ -86,9 +86,18 @@ If you get stuck on any step, be sure to print the output to `stdout`!
   - [ ] Translating page content using Google Translate.
   - [ ] Parse Markdown (`.md`) files and transform them into HTML. `#` through `######` should translate to `<h1>` through `<h6>` elements.
   - [X] **_FILL IN THE BLANK_**: I will use the `SRG` library. The documentation is located [`here`](https://pkg.go.dev/github.com/foize/go.sgr). My goal is to use it to Complete v1.1 Stretch Challenges of adding color/formating on final print statement.
-  - [ ] **_FILL IN THE BLANK_**: I will use the `godotenv` library. The documentation is located [`here`](https://pkg.go.dev/github.com/joho/godotenv@v1.3.0). My goal is to use it to `Hide API Keys & Other Secret Things`.
-  - [ ] **_FILL IN THE BLANK_**: I will use the `req` library. The documentation is located [`here`](https://pkg.go.dev/github.com/imroc/req@v0.3.0). My goal is to use it to `Interact with the lichess.org API`.
-- [ ] **Add, commit, and push to GitHub**.
+  - [X] **_FILL IN THE BLANK_**: I will use the `godotenv` library. The documentation is located [`here`](https://pkg.go.dev/github.com/joho/godotenv@v1.3.0). My goal is to use it to `Hide API Keys & Other Secret Things`.
+  - [X] **_FILL IN THE BLANK_**: I will use the `req` library. The documentation is located [`here`](https://pkg.go.dev/github.com/imroc/req@v0.3.0). My goal is to use it to `Interact with the lichess.org API`.
+- [X] **Add, commit, and push to GitHub**.
+- [ ] Add Template For Chess Flyer
+- [ ] Create Html Page With Flyer Temlple
+
+### v1.3
+
+#### v1.3 Requirements
+
+- [ ] Host to github Pages
+- [ ] **_FILL IN THE BLANK_**: I will use the `Shoutrrr` library. The documentation is located [`here`](https://containrrr.dev/shoutrrr/getting-started/). My goal is to use it to `Send automated notification to Slack and Discord with the new Flyer URl`.
 
 ## Resources
 
