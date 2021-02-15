@@ -89,8 +89,10 @@ If you get stuck on any step, be sure to print the output to `stdout`!
   - [X] **_FILL IN THE BLANK_**: I will use the `godotenv` library. The documentation is located [`here`](https://pkg.go.dev/github.com/joho/godotenv@v1.3.0). My goal is to use it to `Hide API Keys & Other Secret Things`.
   - [X] **_FILL IN THE BLANK_**: I will use the `req` library. The documentation is located [`here`](https://pkg.go.dev/github.com/imroc/req@v0.3.0). My goal is to use it to `Interact with the lichess.org API`.
 - [X] **Add, commit, and push to GitHub**.
-- [ ] Add Template For Chess Flyer
-- [ ] Create Html Page With Flyer Temlple
+- [X] Add Template For Chess Flyer
+- [X] Create Html Page With Flyer Temlple
+- [ ] Update Template For Chess Flyer
+- [ ] Update saving location
 
 ### v1.3
 
