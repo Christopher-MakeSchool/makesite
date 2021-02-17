@@ -91,13 +91,15 @@ If you get stuck on any step, be sure to print the output to `stdout`!
 - [X] **Add, commit, and push to GitHub**.
 - [X] Add Template For Chess Flyer
 - [X] Create Html Page With Flyer Temlple
-- [ ] Update Template For Chess Flyer
-- [ ] Update saving location
+- [X] Update Template For Chess Flyer
+- [X] Update saving location
+- [X] Add Command to get relavent links to chess websties
 
 ### v1.3
 
 #### v1.3 Requirements
 
+- [ ] Polish Chess Flyer Template
 - [ ] Host to github Pages
 - [ ] **_FILL IN THE BLANK_**: I will use the `Shoutrrr` library. The documentation is located [`here`](https://containrrr.dev/shoutrrr/getting-started/). My goal is to use it to `Send automated notification to Slack and Discord with the new Flyer URl`.
 

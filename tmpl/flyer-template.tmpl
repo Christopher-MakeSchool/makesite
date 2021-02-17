@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Chess Flyer {{ .StartsAt }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body class="text-center">
+    <br />
+    <br />
+    <div>
+      <img src="./imgs/2d_chess_board.png" alt="2D Chess Board" />
+      <img src="./imgs/3d_chess_board.png" alt="3D Chess Board" />
+    </div>
+    <br />
+    <br />
+    <div>
+      <a href="http://lichess.org/tournament/{{ .ID }}" target="_blank" rel="noopener noreferrer"
+        >http://lichess.org/tournament/{{ .ID }}</a
+      >
+    </div>
+
+    {{.ID}}
+    {{.FullName}}
+    {{.Clock}}
+    {{.Increment}}
+    {{.Limit}}
+    {{.Minutes}}
+    {{.CreatedBy}}
+    {{.System}}
+    {{.SecondsToStart}}
+    {{.SecondsToFinish}}
+    {{.IsFinished}}
+    {{.IsRecentlyFinished}}
+    {{.PairingsClosed}}
+    {{.StartsAt}}
+    {{.NbPlayers}}
+    {{.Perf}}
+    {{.Icon}}
+    {{.Key}}
+    {{.Name}}
+    {{.Position}}
+  </body>
+</html>
